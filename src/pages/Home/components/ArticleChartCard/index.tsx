@@ -45,7 +45,9 @@ const ArticleChartCard: React.FC = () => {
   }, []);
 
   return (
+    // 加载中，把内容嵌入spin中，将现有容器变成loading状态
     <Spin spinning={loading} size='large'>
+      {/* 卡片 */}
       <Card
         className={styles.homeBoxCard}
         title={t('page.home.articlechartcard.card-title')}
@@ -80,6 +82,7 @@ const ArticleChartCard: React.FC = () => {
             </span>
           </div>
         </div>
+        {/* 分割线 */}
         <Divider />
         <Row>
           <Col span={12}>{t('page.home.text-total')}</Col>

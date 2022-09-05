@@ -15,10 +15,13 @@ import { accountLogin } from './service';
 
 import style from './index.module.less';
 
+// memo包了,缓存
 export default memo(() => {
   const navigate = useNavigate();
-
+  // t是i18n缓存里的语言类型，这里是做了一个多语言处理，用recoli状态管理。
   const t = useRecoilValue(useI18n(locales));
+  console.log(t, 't');
+  console.log('t是i18n的语言文件，渲染的时候用t()包裹内容');
 
   const [loginStatus, setLoginStatus] = useState<string>('');
   const [submitLoading, setSubmitLoading] = useState<boolean>(false);

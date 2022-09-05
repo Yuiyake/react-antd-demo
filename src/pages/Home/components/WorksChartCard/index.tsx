@@ -11,6 +11,7 @@ import { WorksChartDataType } from './data';
 import { ResponseData } from '@/utils/request';
 import { weeknewWorks } from './service';
 
+// echarts数据
 const worksChartOption: EChartsOption = {
   tooltip: {},
   grid: {

@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { IRouter } from '@/@types/router';
 
 const pathPre = '/user';
-
+// 动态路由
 const UserLayoutRoutes: IRouter[] = [
   {
     path: `${pathPre}/login`,

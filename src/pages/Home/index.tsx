@@ -32,6 +32,7 @@ const TableColProps = {
 function App() {
   return (
     <div className='layout-main-conent'>
+      {/* gutter是表格间距 */}
       <Row gutter={24}>
         <Col {...ChartColProps}>
           <Suspense fallback={<PageLoading />}>

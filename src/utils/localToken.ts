@@ -1,6 +1,5 @@
 /**
- * 自定义 token 操作
- * @author LiQingSong
+ * 自定义 token 操作,封装获取，设置，删除token操作
  */
 import settings from '@/config/settings';
 

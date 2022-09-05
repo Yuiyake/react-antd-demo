@@ -21,6 +21,7 @@ export const userState = atom({
   default: initialState,
 });
 
+// selector是用来计算过滤数据的，跟atom隔离，也可以理解成是把atomdeepClone了一份用来单独作为一个变量
 export const userMessageState = selector({
   key: 'userMessageState',
   get: async () => {
