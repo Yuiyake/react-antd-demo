@@ -1,6 +1,6 @@
 # admin-antd-react-vite
 
-此分支是 Vite + React 18 + Ant Design + Recoil 版本 ， Webpack UmiJS 版本请查看 v1.0-umijs (分支)（[github](https://github.com/lqsong/admin-antd-react/tree/v1.0-umijs)、[gitee](https://gitee.com/lqsong/admin-antd-react/tree/v1.0-umijs)）
+此分支是 Vite + React 18 + Ant Design + Recoil 版本
 
 ## Demo
 
@@ -114,12 +114,4 @@ $ pnpm run build
 ```
 $ pnpm run svgo
 ```
-
-## 捐赠
-
-如果你觉得这个项目帮助到了你，请帮助点击 Star，你也可以请作者喝咖啡表示鼓励.
-
-**ALIPAY**             |  **WECHAT**
-:-------------------------:|:-------------------------:
-![Alipay](http://uploads.liqingsong.cc/20210430/f62d2436-8d92-407d-977f-35f1e4b891fc.png)  |  ![Wechat](http://uploads.liqingsong.cc/20210430/3e24efa9-8e79-4606-9bd9-8215ce1235ac.png)
 
