@@ -1,44 +1,40 @@
 import React from 'react';
-import { FormInstance } from 'antd/lib/form';
+import { FormInstance } from 'antd/es/form/Form';
 import { Modal, Form, Input, Button, message } from 'antd';
-import TypeSelect from './TypeSelect';
+import TypeSelect from '@/pages/pagesample/list/search/table/components/TypeSelect';
 import { TableListItem } from '../data.d';
 
-interface UpdateFormPorps {
+interface CreateFormProps {
   visible: boolean;
-  values: Partial<TableListItem>;
+  values?: Partial<TableListItem>;
   onSubmitLoading: boolean;
-  onSubmit: (values: TableListItem, form: FormInstance) => void;
+  onSubmit: (values: Omit<TableListItem, 'id'>, form: FormInstance) => void;
   onCancel: () => void;
 }
 
-const UpdateForm: React.FC<UpdateFormPorps> = (props) => {
+const CreateForm: React.FC<CreateFormProps> = (props) => {
   const { visible, values, onSubmit, onSubmitLoading, onCancel } = props;
-
-  const formVals: TableListItem = {
-    id: values.id || 0,
-    name: values.name || '',
-    desc: values.desc || '',
-    href: values.href || '',
-    type: values.type || '',
+  const formVals = {
+    name: values?.name || '',
+    desc: values?.name || '',
+    href: values?.name || '',
+    type: values?.name || '',
   };
-
   const [form] = Form.useForm();
 
   const onFinish = async () => {
     try {
       const fieldsValue = await form.validateFields();
       onSubmit({ ...formVals, ...fieldsValue }, form);
-    } catch (error) {
+    } catch (err) {
       message.warning('验证错误');
     }
   };
 
   return (
     <Modal
-      destroyOnClose
-      maskClosable={false}
-      title='编辑'
+      destroyOnClose={false}
+      title='新增'
       visible={visible}
       onCancel={onCancel}
       footer={[
@@ -71,8 +67,9 @@ const UpdateForm: React.FC<UpdateFormPorps> = (props) => {
             },
           ]}
         >
-          <TypeSelect placeholder='请选择' />
+          <TypeSelect placeholder='请选择'></TypeSelect>
         </Form.Item>
+
         <Form.Item
           label='名称'
           name='name'
@@ -89,8 +86,9 @@ const UpdateForm: React.FC<UpdateFormPorps> = (props) => {
             },
           ]}
         >
-          <Input placeholder='请输入名称' />
+          <Input placeholder='请输入名称'></Input>
         </Form.Item>
+
         <Form.Item
           label='网址'
           name='href'
@@ -110,15 +108,15 @@ const UpdateForm: React.FC<UpdateFormPorps> = (props) => {
             },
           ]}
         >
-          <Input placeholder='请输入网址' />
+          <Input placeholder='请输入网址'></Input>
         </Form.Item>
 
         <Form.Item label='备注' name='desc'>
-          <Input placeholder='请输入备注' />
+          <Input placeholder='请输入备注'></Input>
         </Form.Item>
       </Form>
     </Modal>
   );
 };
 
-export default UpdateForm;
+export default CreateForm;

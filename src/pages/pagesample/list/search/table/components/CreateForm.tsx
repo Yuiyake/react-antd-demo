@@ -1,9 +1,7 @@
 import React from 'react';
 import { FormInstance } from 'antd/lib/form';
 import { Modal, Form, Input, Button, message } from 'antd';
-
 import TypeSelect from './TypeSelect';
-
 import { TableListItem } from '../data.d';
 
 interface CreateFormProps {

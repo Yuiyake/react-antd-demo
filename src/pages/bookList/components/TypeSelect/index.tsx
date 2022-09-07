@@ -1,10 +1,11 @@
 import React from 'react';
 import { Select } from 'antd';
 
+// 封装按头部/底部查询排序标签
 interface TypeSelectProps {
   value?: string;
   placeholder?: string;
-  onChange?: (value: string) => void;
+  onChange?: (value: String) => void;
 }
 
 const TypeSelect: React.FC<TypeSelectProps> = (props) => {
