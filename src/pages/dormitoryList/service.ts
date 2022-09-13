@@ -1,5 +1,5 @@
 import request from '@/utils/request';
-import { TableListQueryParams, TableListItem } from './data.d';
+import { TableListQueryParams, TableListItem } from './data';
 
 export async function queryList(params?: TableListQueryParams): Promise<any> {
   return request({

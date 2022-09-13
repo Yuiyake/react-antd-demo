@@ -8,6 +8,11 @@ export default {
   'universal-layout.menu.home.custom-breadcrumbs.liqingsong.cc': 'liqingsong.cc',
   'universal-layout.menu.home.docs': 'Using document',
 
+  'universal-layout.menu.dormitory': 'dormitory management',
+  'universal-layout.menu.dormitory.info': 'dormitory info',
+  'universal-layout.menu.fee.electricity': 'electricity fees',
+  'universal-layout.menu.fee.water': 'water fees',
+
   'universal-layout.menu.component': 'Component',
   'universal-layout.menu.component.icon': 'Icon',
   'universal-layout.menu.component.icon.svg': 'IconSvg',

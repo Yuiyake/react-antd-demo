@@ -123,6 +123,24 @@ const universalLayoutRotes: IRouter[] = [
     ],
   },
   {
+    path: '/dormitoryList',
+    meta: {
+      icon: 'control',
+      title: 'universal-layout.menu.dormitory',
+    },
+    redirect: '/dormitoryList/dormitoryInfo',
+    children: [
+      {
+        path: 'dormitoryInfo',
+        meta: {
+          icon: 'control',
+          title: 'universal-layout.menu.dormitory.info',
+        },
+        component: lazy(() => import('@/pages/dormitoryList')),
+      },
+    ],
+  },
+  {
     path: '/pages',
     redirect: '/pages/list/basic',
     meta: {

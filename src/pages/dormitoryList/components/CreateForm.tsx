@@ -2,7 +2,7 @@ import React from 'react';
 import { FormInstance } from 'antd/es/form/Form';
 import { Modal, Form, Input, Button, message } from 'antd';
 import TypeSelect from '@/pages/pagesample/list/search/table/components/TypeSelect';
-import { TableListItem } from '../data.d';
+import { TableListItem } from '../data';
 
 interface CreateFormProps {
   visible: boolean;

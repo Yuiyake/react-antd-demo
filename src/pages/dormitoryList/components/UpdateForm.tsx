@@ -2,8 +2,7 @@ import React from 'react';
 import { FormInstance } from 'antd/lib/form';
 import { Modal, Form, Input, Button, message } from 'antd';
 import TypeSelect from './TypeSelect';
-import { TableListItem } from '../data.d';
-
+import { TableListItem } from '../data';
 
 interface UpdateFormProps {
   visible: boolean;
@@ -36,7 +35,21 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
   };
 
   return (
-    <Modal>
+    <Modal
+      destroyOnClose
+      maskClosable={false}
+      title='编辑'
+      visible={visible}
+      onCancel={onCancel}
+      footer={[
+        <Button key='back' onClick={() => onCancel()}>
+          取消
+        </Button>,
+        <Button key='submit' type='primary' htmlType='submit' loading={onSubmitLoading} onClick={() => onFinish()}>
+          提交
+        </Button>,
+      ]}
+    >
       <Form>
         <Form.Item
           label='位置'
@@ -70,10 +83,34 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           <Input placeholder='请输入名称'></Input>
         </Form.Item>
 
+        <Form.Item
+          label='网址'
+          name='href'
+          rules={[
+            {
+              required: true,
+              validator: async (rule, value) => {
+                if (value === '' || !value) {
+                  throw new Error('请输入网址');
+                } else if (
+                  // eslint-disable-next-line no-useless-escape
+                  !/(http|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/.test(value)
+                ) {
+                  throw new Error('请输入正确的网址');
+                }
+              },
+            },
+          ]}
+        >
+          <Input placeholder='请输入网址' />
+        </Form.Item>
 
+        <Form.Item label='备注' name='desc'>
+          <Input placeholder='请输入备注' />
+        </Form.Item>
       </Form>
     </Modal>
-  )
+  );
 };
 
 export default UpdateForm;

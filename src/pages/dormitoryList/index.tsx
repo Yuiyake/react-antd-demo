@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button, Card, Col, Divider, Form, FormInstance, Input, message, Modal, Radio, Row, Table, Tag } from 'antd';
 import { ResponseData } from '@/utils/request';
 import { createData, detailData, queryList, removeData, updateData as updateDataService } from './service';
-import { PaginationConfig, TableListItem, IResponseData } from './data.d';
+import { PaginationConfig, TableListItem, IResponseData } from './data';
 
 import IconSvg from '@/components/IconSvg';
 

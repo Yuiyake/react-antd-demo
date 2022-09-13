@@ -8,6 +8,11 @@ export default {
   'universal-layout.menu.home.custom-breadcrumbs.liqingsong.cc': 'liqingsong.cc',
   'universal-layout.menu.home.docs': '使用文档',
 
+  'universal-layout.menu.dormitory': '宿舍管理',
+  'universal-layout.menu.dormitory.info': '宿舍信息',
+  'universal-layout.menu.fee.electricity': '电费信息',
+  'universal-layout.menu.fee.water': '水费信息',
+
   'universal-layout.menu.component': '组件',
   'universal-layout.menu.component.icon': '图标',
   'universal-layout.menu.component.icon.svg': 'IconSvg',
